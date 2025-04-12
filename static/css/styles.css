@@ -1,0 +1,497 @@
+.container {
+    max-width: 1600px; /* Set your maximum desired width */
+}
+
+.ratio img {
+    max-width: 800px; /* Limits image resolution */
+    margin: 0 auto; /* Centers images in their containers */
+}
+
+.background-image {
+    position: fixed;
+    left: -20%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1331px;
+    height: 1862px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.9; /* Adjust as needed */
+}
+
+.brand-title {
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 400;
+    font-variation-settings: 'wght' 400; /* Variable font specific */
+    letter-spacing: 1rem;
+}
+
+/* Navigation */
+.navbar-nav .nav-link {
+    font-family: 'Roboto Flex';
+    font-weight: 300;
+    font-variation-settings: 'wght' 300;
+    text-transform: uppercase;
+}
+
+/* Ink divider */
+.ink-divider {
+    height: 2px;
+    background: #000;
+    margin: 0 auto;
+    width: 95%;
+    position: relative;
+    margin-top: -8px;
+}
+
+.ink-divider::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, 
+        transparent 10%, 
+        rgba(0,0,0,0.3) 30%, 
+        rgba(0,0,0,0.5) 50%, 
+        rgba(0,0,0,0.3) 70%, 
+        transparent 90%);
+    filter: blur(1px);
+    top: 2px;
+}
+
+/* Navbar link hover effects */
+.navbar-nav .nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    transform: scale(1.05);
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 0;
+    background: #000;
+    transition: all 0.3s ease;
+    /* Ink line effect */
+    background-image: linear-gradient(90deg, 
+        transparent 10%, 
+        rgba(0,0,0,0.4) 30%, 
+        #000 50%, 
+        rgba(0,0,0,0.4) 70%, 
+        transparent 90%);
+    filter: blur(0.5px);
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 110%;
+}
+
+/* Optional: Add subtle text shadow */
+.brand-title {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Gallery container adjustments */
+.gallery-container {
+    padding-left: 280px; /* Adjust based on your background image width */
+    position: relative;
+    z-index: 1;
+}
+/* sign */
+.signature {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: -999; /* Higher than footer but lower than lightbox */
+    width: 15vw; /* Responsive width based on viewport */
+    max-width: 400px; /* Prevent becoming too large */
+    min-width: 300px; /* Prevent becoming too small */
+    opacity: 0.7;
+    transition: all 0.3s ease;
+  }
+  
+  .signature:hover {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+/* ABOUT PAGE */
+.container p {
+    position: relative;
+    display: inline-block;
+}
+
+.container p::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -8px;
+    height: 2px;
+    background: #000;
+    background-image: linear-gradient(90deg, 
+        transparent 10%, 
+        rgba(0,0,0,0.4) 30%, 
+        #000 50%, 
+        rgba(0,0,0,0.4) 70%, 
+        transparent 90%);
+    filter: blur(0.8px);
+}
+
+/* BOOKING PAGE */
+  
+.booking-section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+    border: 2px solid #000;
+    border-radius: 0;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #666;
+}
+
+.btn-book {
+    background: #000;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.btn-book:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+.tattoo-details {
+    border-left: 3px solid #000;
+    padding-left: 2rem;
+}
+
+/* Awards Layout */
+.award-text-side {
+    background: rgba(0,0,0,0.9);
+    padding: 3rem;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.award-images-side {
+    background: rgba(255,255,255,0.05);
+    padding: 2rem;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.award-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.award-item {
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.award-item img {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 0 10px rgba(197, 164, 126, 0.3));
+}
+
+.award-meta {
+    color: #c5a47e;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .award-text-side,
+    .award-images-side {
+        min-height: auto;
+        padding: 2rem;
+    }
+    
+    .award-item img {
+        width: 80px;
+    }
+    
+    .award-badges {
+        gap: 1rem;
+    }
+}
+
+/* Category-specific Icons */
+.award-icon .fa-trophy { color: #gold; }
+.award-icon .fa-palette { color: #c5a47e; }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .signature {
+      width: 25vw;
+      bottom: 10px;
+      right: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .signature {
+      width: 30vw;
+      bottom: 5px;
+      right: 5px;
+    }
+  }
+
+/* Responsive adjustments */
+@media (max-width: 1600px) {
+    .gallery-container {
+        padding-left: 200px;
+    }
+    .background-image {
+        width: 1000px;
+        height: auto;
+    }
+}
+
+@media (max-width: 1200px) {
+    .gallery-container {
+        padding-left: 150px;
+    }
+    .background-image {
+        width: 800px;
+    }
+}
+
+@media (max-width: 992px) {
+    .gallery-container {
+        padding-left: 100px;
+    }
+    .background-image {
+        width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-container {
+        padding-left: 30px;
+    }
+    .background-image {
+        width: 400px;
+        opacity: 0.7;
+    }
+}
+
+/* Keep your existing custom-ratio styles */
+.custom-ratio {
+    aspect-ratio: 3/4;
+    position: relative;
+}
+.custom-ratio img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/*====== Social Media Icons ====== */
+
+footer {
+    position: relative;
+    z-index: 2;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.social-icon i {
+    font-size: 1.2rem;
+}
+
+/* Facebook specific styles */
+.social-icon.facebook {
+    background: #3b5998; /* Facebook blue */
+}
+.social-icon.facebook i {
+    color: white;
+}
+
+/* Instagram specific styles */
+.social-icon.instagram {
+    background: #f09433; /* Instagram gradient start */
+    background: linear-gradient(45deg, 
+        #f09433 0%, 
+        #e6683c 25%, 
+        #dc2743 50%, 
+        #cc2366 75%, 
+        #bc1888 100%); /* Full Instagram gradient */
+}
+.social-icon.instagram i {
+    color: white;
+}
+
+/* Hover effects */
+.social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.social-icon.facebook:hover {
+    background: #2d4373;
+}
+.social-icon.instagram:hover {
+    background: #bc1888;
+    background: linear-gradient(45deg, 
+        #bc1888 0%, 
+        #cc2366 25%, 
+        #dc2743 50%, 
+        #e6683c 75%, 
+        #f09433 100%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .social-icon i {
+        font-size: 1rem;
+    }
+}
+
+.social-icon.mail {
+    background: #EA4335; /* Gmail red color */
+}
+.social-icon.mail i {
+    color: white;
+}
+.social-icon.mail:hover {
+    background: #c23322;
+}
+
+/*====== LIGHTBOX Styles ====== */
+
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+}
+
+.lightbox-image {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 4px;
+    animation: lightboxFade 0.3s ease;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -35px;
+    right: -35px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.lightbox-close:hover {
+    opacity: 0.8;
+}
+
+@keyframes lightboxFade {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Add cursor pointer to gallery images */
+.custom-ratio {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.custom-ratio:hover {
+    transform: scale(1.03);
+}
+
+/*====== @MEDIA FOR IMAGE ROWS ====== */
+
+/* Custom breakpoint for 8 columns */
+
+@media (min-width: 1400px) {
+    .col-xxl-1 { flex: 0 0 12.5%; max-width: 12.5%; }
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .col-xl-1-5 { flex: 0 0 20%; max-width: 20%; }
+}
+
+.custom-ratio {
+    aspect-ratio: 3/4; /* Width/Height ratio (3 units wide, 4 units tall) */
+    position: relative;
+}
+
+.custom-ratio img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .custom-ratio {
+        aspect-ratio: 2/3; /* Slightly taller on mobile */
+    }
+}

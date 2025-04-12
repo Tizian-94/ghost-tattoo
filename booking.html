@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost Tattoo</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <style>
+        .brand-title {
+            font-size: 4rem;
+            letter-spacing: 0.3rem;
+            text-transform: uppercase;
+        }
+        @media (max-width: 768px) {
+            .brand-title {
+                font-size: 2.5rem;
+            }
+        }
+        .nav-link {
+            font-size: 1.1rem;
+            letter-spacing: 0.1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-4">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav text-center">
+                    <li class="nav-item px-3"><a href="index.html" class="nav-link">HOME</a></li>
+                    <li class="nav-item px-3"><a href="about.html" class="nav-link">ABOUT</a></li>
+                    <li class="nav-item px-3"><a href="booking.html" class="nav-link">BOOKING</a></li>
+                    <li class="nav-item px-3"><a href="tattoo_course.html" class="nav-link">TATTOO COURSE</a></li>
+                    <li class="nav-item px-3"><a href="awards.html" class="nav-link">AWARDS</a></li>
+                    <li class="nav-item px-3"><a href="location.html" class="nav-link">LOCATION</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="ink-divider"></div>
+
+    <!-- Main Branding -->
+    <div class="container text-center py-5 my-5">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h1 class="brand-title fw-bold">
+                    <span class="d-block page_title">GHOST TATTOO</span>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <!--booking form-->
+    <div class="container py-5 my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="booking-section">
+                    <h2 class="mb-4">Book Your Session</h2>
+                    
+                    <form
+                        action="https://formspree.io/f/xldjzlgy"
+                        method="POST"
+                        >
+                        <input type="hidden" name="_next" value="success.html">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="name" placeholder="Full Name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" name="_replyto" placeholder="Email" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="tel" class="form-control" name="phone" placeholder="Phone Number" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="date" class="form-control" name="preferred-date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea class="form-control" name="tattoo-description" rows="4" 
+                                      placeholder="Describe your tattoo idea (placement, size, style, etc.)" required></textarea>
+                        </div>
+
+                        <div class="form-group tattoo-details">
+                            <h5>Tattoo Specifications</h5>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="size" id="small" value="small" required>
+                                <label class="form-check-label" for="small">Small (1-2 hours)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="size" id="medium" value="medium">
+                                <label class="form-check-label" for="medium">Medium (3-4 hours)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="size" id="large" value="large">
+                                <label class="form-check-label" for="large">Large (5+ hours)</label>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-book">Submit Request</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="background-image"><img src="imgs/bg.png"></div>
+
+
+    <footer class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <div class="d-flex gap-3">
+                        <!-- Facebook Icon -->
+                        <a href="https://www.facebook.com/dejan.zlendicghost" class="social-icon facebook" target="_blank" rel="noopener">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        
+                        <!-- Instagram Icon -->
+                        <a href="https://www.instagram.com/dejan.zlendic_ghost?igsh=MTc1c241NXZua2N5ag==&utm_source=ig_contact_invite" class="social-icon instagram" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                        <a href="mailto:ghosttattoo@gmail.com" class="social-icon mail">
+                            <i class="far fa-envelope"></i>
+                        </a>
+                    </div>
+                    <div class="text-center py-3">
+                        <b>Istarska 2, Rijeka</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--signature-->
+    <div class="signature">
+        <a href="about.html"><img src="imgs/ghost-sign.svg" alt="Signature" class="img-fluid"></a>
+    </div>
+    
+    
+    
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/scripts.js"></script>
+</body>
+</html>
