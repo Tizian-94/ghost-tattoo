@@ -28,7 +28,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white py-4">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white invert-card py-4">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -41,6 +41,7 @@
                     <li class="nav-item px-3"><a href="tattoo_course.html" class="nav-link">TATTOO COURSE</a></li>
                     <li class="nav-item px-3"><a href="awards.html" class="nav-link">AWARDS</a></li>
                     <li class="nav-item px-3"><a href="location.html" class="nav-link">LOCATION</a></li>
+                    <li class="nav-item px-3"><a href="#" class="nav-link" id="darkModeToggle">Dark Mode</a></li>
                 </ul>
             </div>
         </div>
@@ -48,43 +49,65 @@
     <div class="ink-divider"></div>
 
     <!-- Main Branding -->
-    <div class="container text-center py-5 my-5">
-        <div class="row justify-content-center">
-            <div class="col-12">
-                <h1 class="brand-title fw-bold">
-                    <span class="d-block page_title">GHOST TATTOO</span>
-                </h1>
-            </div>
+    <div id="glassWrapper" class="container py-5 my-5 glassmorph">
+    <!-- Section Header -->
+    <div class="text-center mb-5">
+        <h1 class="brand-title fw-bold">GHOST TATTOO</h1>
+    </div>
+
+    <!-- Row 1: Image left, text right on lg (stacks on mobile) -->
+    <div class="row align-items-center mb-5">
+        <div class="col-12 col-lg-6 order-lg-1">
+        <img src="imgs/22.jpg" class="img-fluid rounded" alt="Course Overview">
+        </div>
+        <div class="col-12 col-lg-6 order-lg-2 invert-card p-4">
+        <h2>Individual and Group Tattoo Courses – All Year Round!</h2>
+        <p>I offer individual courses, as well as group workshops (for multiple people) held several times a month throughout the year. These courses are ideal for beginners, but also for those who want to improve their skills.</p>
         </div>
     </div>
-    <!--About text-->
-    <div class="container py-5 my-5 text-center text-md-start">
-        <div class="row justify-content-center">
-            <div class="row">
-                <div class="col-4 mx-5">
-                    <img src="imgs/22.jpg" class="img-fluid object-fit-cover">
-                </div>
-                <div class="col-4 bg-white my-5 mx-5">
-                    <h1>The standard Lorem Ipsum passage</h1>
-                    <p>
-                        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-                    </p>
-                </div>
-                <div class="col-4 bg-white my-5 mx-5">
-                    <h1>The standard Lorem Ipsum passage</h1>
-                    <p>
-                        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-                    </p>
-                </div>
-                <br class="my-5 mx-5">
-                <div class="col-4 my-5 mx-5">
-                    <img src="imgs/1.jpg" class="img-fluid object-fit-cover my-5 mx-5">
-                </div>
-                <div class="col-4 my-5 mx-5">
-                    <p></p>
-                </div>  
-            </div>
+
+    <!-- Row 2: Text left, image right on lg -->
+    <div class="row align-items-center mb-5">
+        <div class="col-12 col-lg-6 order-lg-1 invert-card p-4">
+        <h2>About the Course</h2>
+        <ul class="mb-0">
+            <li>✅ You will learn everything – from the basics of tattooing to advanced techniques, with practical work and mentoring.</li>
+            <li>✅ Faster progress than with YouTube – because you have professional support and are getting immediate answers to your questions.</li>
+            <li>✅ With this course you don't just buy knowledge – you buy time and accelerate your path to becoming a professional tattoo artist.</li>
+            <li>Invest in yourself and your knowledge – become a top tattoo artist with proper training!</li>
+        </ul>
         </div>
+        <div class="col-12 col-lg-6 order-lg-2">
+        <img src="imgs/1.jpg" class="img-fluid rounded" alt="Course Details">
+        </div>
+    </div>
+
+    <!-- Row 3: Image left, text right on lg (Croatian) -->
+    <div class="row align-items-center mb-5">
+        <div class="col-12 col-lg-6 order-lg-1">
+        <img src="imgs/20.jpg" class="img-fluid rounded" alt="Tečajevi Tetoviranja">
+        </div>
+        <div class="col-12 col-lg-6 order-lg-2 invert-card p-4">
+        <h2>Individualni i grupni tečajevi tetoviranja – kroz cijelu godinu!</h2>
+        <p>Nudim individualne tečajeve, kao i grupne radionice (za više osoba) koje se održavaju nekoliko puta mjesečno tijekom cijele godine. Ovi tečajevi su idealni za početnike, ali i za one koji žele unaprijediti svoje vještine.</p>
+        </div>
+    </div>
+
+    <!-- Row 4: Text left, image right on lg (Croatian) -->
+    <div class="row align-items-center mb-5">
+        <div class="col-12 col-lg-6 order-lg-1 invert-card p-4">
+        <h2>O tečaju</h2>
+        <ul class="mb-0">
+            <li>✅ Naučit ćeš sve – od osnova tetoviranja do naprednih tehnika, uz praktičan rad i mentorstvo.</li>
+            <li>✅ Brži napredak nego uz YouTube – jer imaš stručnu podršku i odmah dobivaš odgovore na pitanja.</li>
+            <li>✅ S ovim tečajem ne kupuješ samo znanje – kupuješ vrijeme i ubrzavaš svoj put do toga da postaneš profesionalni tattoo artist.</li>
+            <li>Uloži u sebe i svoje znanje – postani vrhunski tattoo umjetnik uz pravi trening!</li>
+        </ul>
+        </div>
+        <div class="col-12 col-lg-6 order-lg-2">
+        <img src="imgs/21.jpg" class="img-fluid rounded" alt="O Tečaju">
+        </div>
+    </div>
     </div>
 
     <div class="background-image"><img src="imgs/bg.png"></div>
@@ -128,5 +151,6 @@
     <!-- Bootstrap JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="static/js/scripts.js"></script>
+    <script src="static/js/mode.js"></script>
 </body>
 </html>

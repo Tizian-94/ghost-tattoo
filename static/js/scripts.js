@@ -1,29 +1,30 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Lightbox functionality
-    const images = document.querySelectorAll('.custom-ratio img');
-    const overlay = document.getElementById('lightboxOverlay');
-    const lightboxImg = document.getElementById('lightboxImage');
-    const closeBtn = document.querySelector('.lightbox-close');
+document.addEventListener('DOMContentLoaded', () => {
+  // ==================== LIGHTBOX SETUP ====================
+  const overlay = document.getElementById('lightboxOverlay');
+  const closeBtn = document.querySelector('.lightbox-close');
+  const images = document.querySelectorAll('.custom-ratio img');
+  const lightbox = document.getElementById('lightboxImage');
 
+  if (overlay && closeBtn && lightbox && images.length) {
     function closeLightbox() {
-        overlay.style.display = 'none';
-        document.body.style.overflow = 'auto';
+      overlay.style.display = 'none';
+      document.body.style.overflow = 'auto';
     }
 
     images.forEach(img => {
-        img.addEventListener('click', function() {
-            lightboxImg.src = this.src;
-            overlay.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        });
+      img.addEventListener('click', () => {
+        lightbox.src = img.src;
+        overlay.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      });
     });
 
     closeBtn.addEventListener('click', closeLightbox);
-    overlay.addEventListener('click', function(e) {
-        if(e.target === overlay) closeLightbox();
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) closeLightbox();
     });
-
-    document.addEventListener('keydown', function(e) {
-        if(e.key === 'Escape') closeLightbox();
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLightbox();
     });
+  }
 });

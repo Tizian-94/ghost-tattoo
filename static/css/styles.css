@@ -1,3 +1,13 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+body.dark-mode {
+  background: #1e1e1e; /* a soft black/charcoal */
+}
+
 .container {
     max-width: 1600px; /* Set your maximum desired width */
 }
@@ -232,7 +242,70 @@
     margin-top: 0.5rem;
 }
 
-/* Responsive Adjustments */
+.glassmorph {
+    background: rgba(255, 255, 255, 0.1); /* White-ish see-through */
+    backdrop-filter: blur(10px); /* The magic blur */
+    -webkit-backdrop-filter: blur(10px); /* Safari, being needy as always */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Icy border */
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.2);
+    padding: 2rem;
+}
+
+.glassmorph-dark {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    color: #fff;
+}
+
+
+body.dark-mode .invert-card {
+  background-color: #2a2a2a !important;
+  color: #f1f1f1 !important;
+  border-color: #444 !important;
+}
+
+
+body.dark-mode .invert-card h1,
+body.dark-mode .invert-card p,
+body.dark-mode .invert-card li {
+  color: #f1f1f1 !important;
+}
+
+
+body.dark-mode .invert-card a {
+  color: #9cdcfe !important;
+}
+
+body.dark-mode .invert-card.bg-white {
+  background-color: #2a2a2a !important;
+}
+
+
+body.dark-mode .no-dark-text,
+body.dark-mode .no-dark-text input,
+body.dark-mode .no-dark-text h2,
+body.dark-mode .no-dark-text h5,
+body.dark-mode .no-dark-text textarea,
+body.dark-mode .no-dark-text select,
+body.dark-mode .no-dark-text label {
+  color: black !important;
+}
+
+body.dark-mode .no-dark-text ::placeholder {
+  color: #555 !important;
+}
+
+body.dark-mode .no-dark-text .form-control {
+  background: white;
+  border-color: #ccc;
+}
+
 @media (max-width: 992px) {
     .award-text-side,
     .award-images-side {
@@ -494,4 +567,21 @@ footer {
     .custom-ratio {
         aspect-ratio: 2/3; /* Slightly taller on mobile */
     }
+}
+
+
+/*────────────────────────────────────────────
+  INDEX PAGE POSEBNO PRAVILO: Disable glass blur but keep dark mode
+────────────────────────────────────────────*/
+
+
+body.index-page .glassmorph {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+
+  background: transparent !important;
+
+  border: none !important;
+  box-shadow: none !important;
+  padding: 2rem;
 }
